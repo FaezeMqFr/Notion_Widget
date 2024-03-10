@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Display with Weekday</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .calendar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .calendar div {
+    font-size: 2em;
+    padding: 5px;
+    margin: 0 2px;
+  }
+  .separator {
+    border-left: 2px solid black;
+    height: 40px;
+    margin: 0 2px;
+  }
+  .weekday {
+    font-size: 1em;
+    margin-top: 5px; /* Add margin to separate from the date elements */
+  }
+</style>
+</head>
+<body>
+<div class="calendar">
+  <p> <div id="day">--</div>
+  <div class="separator"></div>
+  <div id="month">--</div>
+  <div class="separator"></div>
+  <div id="year">--</div> </p>
+  <p <div class="weekday">Weekday</div> </p>
+</div>
+
+<script>
+  // Function to update the calendar
+  function updateCalendar() {
+    const now = new Date();
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const dayElement = document.getElementById('day');
+    const weekdayElement = document.querySelector('.weekday');
+
+    // Update the date elements with the current date values
+    dayElement.textContent = String(now.getDate()).padStart(2, '0');
+    document.getElementById('month').textContent = monthNames[now.getMonth()];
+    document.getElementById('year').textContent = now.getFullYear();
+
+    // Update the weekday element with the full weekday name
+    weekdayElement.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+  }
+
+  // Set an interval to update the calendar every minute
+  setInterval(updateCalendar, 60000);
+
+  // Initial update of the calendar
+  updateCalendar();
+</script>
+</body>
+</html>
