@@ -1,2 +1,1 @@
-# Widget
-Notion widget
+# Notion widget
