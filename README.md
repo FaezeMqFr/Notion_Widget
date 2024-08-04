@@ -4,6 +4,11 @@
 ## Overview
 
 This repository contains a simple HTML and JavaScript project that displays the current date and weekday in a visually appealing calendar format. The calendar updates automatically every minute to ensure the displayed information is always current.
+## Live Demo
+
+You can view the live demo of the widget below:
+
+<iframe src="https://faezemqfr.github.io/Widget/" width="100%" height="500px"></iframe>
 
 ## Features
 
