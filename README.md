@@ -1,5 +1,4 @@
-# Notion widget
-# Date Display with Weekday
+# HTML Widget
 
 ## Overview
 
