@@ -7,7 +7,7 @@ This repository contains a simple HTML and JavaScript project that displays the 
 
 You can view the live demo of the widget below:
 
-<iframe src="https://faezemqfr.github.io/Widget/" width="100%" height="500px"></iframe>
+https://faezemqfr.github.io/Notion_Widget/
 
 ## Features
 
